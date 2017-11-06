@@ -31,6 +31,8 @@ body{
     background-size: $size $size;
     height: $size;
     width: $size;
+    display: block;
+    margin-top: 7px;
   }
 }
 
