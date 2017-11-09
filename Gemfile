@@ -25,6 +25,7 @@ gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'meta-tags'
 
 gem 'social-share-button'
+gem 'rails_12factor'
 
 gem 'annotate'
 # Use jquery as the JavaScript library
