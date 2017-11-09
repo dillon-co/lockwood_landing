@@ -27,6 +27,7 @@ body{
 }
 
 .social-share-button {
+  width: $size;
   .ssb-icon {
     background-size: $size $size;
     height: $size;
@@ -34,6 +35,10 @@ body{
     display: block;
     margin-top: 7px;
   }
+}
+
+.navbar{
+  width: 100px;
 }
 
 h1{
