@@ -29,6 +29,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  after_create :send_confirmation_email
+
   enum suffix: {
        "" => 0,
        "Jr" => 1,
@@ -48,4 +50,8 @@ class User < ApplicationRecord
     "60 – 69" => 5,
     "70 or greater" => 6
   }
+
+  def send_confirmation_email
+    UserMailer.signup_confirmation(self).deliver
+  end
 end

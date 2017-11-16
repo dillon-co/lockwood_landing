@@ -10,6 +10,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   # def create
   #   super
+  #   # UserMailer.deliver_registration_confirmation(@user)
   # end
 
   # GET /resource/edit

@@ -33,6 +33,18 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
 
+  config.action_mailer.smtp_settings = {
+    address: "smtpout.secureserver.net",
+    port: 80,
+    domain: "drchrislockwood.com",
+    authentication: "plain",
+    enable_starttls_auto: true,
+    :user_name      => ENV['LOCKWOOD_EMAIL_USERNAME'],
+    :password       => ENV['LOCKWOOD_EMAIL_PASSWORD']
+  }
+
+
+
   config.action_mailer.perform_caching = false
 
   # Print deprecation notices to the Rails logger.
